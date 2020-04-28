@@ -6,3 +6,7 @@
 .text-green-theme {
   color: rgb(15, 161, 161);
 }
+
+.text-green-dark-theme {
+  color: rgb(31, 40, 168);
+}
