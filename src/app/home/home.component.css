@@ -1,0 +1,4 @@
+.bg-image {
+  background-attachment: fixed;
+  background: url("src/assets/bg.svg") no-repeat;
+}

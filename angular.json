@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sounish-portfolio"
+    }
+  },
+  "defaultProject": "sounish-portfolio",
+  "cli": {
+    "analytics": "b7c96e91-e118-413b-8ab0-981b113ab563"
+  }
 }
