@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsetComponent } from './home/skillset/skillset.component';
 import { ABitAboutComponent } from './home/aBitAbout/aBitAbout.component';
+import { DevelopementBackpackComponent } from './home/developementBackpack/developementBackpack.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
       SkillsetComponent,
-      ABitAboutComponent
+      ABitAboutComponent,
+      DevelopementBackpackComponent
    ],
    imports: [
       BrowserModule,
