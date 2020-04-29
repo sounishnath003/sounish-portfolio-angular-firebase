@@ -14,6 +14,10 @@ import { SortcutSkillsComponent } from './sortcutSkills/sortcutSkills.component'
 import { AboutComponent } from './about/about.component';
 import { HomepagecontentComponent } from './homepagecontent/homepagecontent.component';
 import { ProfilecardComponent } from './about/profilecard/profilecard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { MatCard } from '@angular/material/card';
+import { YoutubecardComponent } from './about/profilecard/youtubecard/youtubecard.component';
 
 @NgModule({
    declarations: [
@@ -28,13 +32,18 @@ import { ProfilecardComponent } from './about/profilecard/profilecard.component'
       SortcutSkillsComponent,
       AboutComponent,
       HomepagecontentComponent,
-      ProfilecardComponent
+      ProfilecardComponent,
+      YoutubecardComponent
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MaterialModule
    ],
-   providers: [],
+   providers: [
+     MatCard
+   ],
    bootstrap: [
       AppComponent
    ]

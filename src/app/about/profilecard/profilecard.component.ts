@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
+import { YoutubecardComponent } from './youtubecard/youtubecard.component';
 
 @Component({
   selector: 'app-profilecard',
@@ -7,9 +13,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilecardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
+
+  openDialog() {
+    return this.dialog.open(YoutubecardComponent, {
+      width: '600px',
+      data: {}
+    });
+  }
+
 
 }
