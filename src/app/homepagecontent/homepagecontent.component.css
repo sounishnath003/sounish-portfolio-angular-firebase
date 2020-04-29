@@ -7,3 +7,9 @@
   ); */
   background: rgb(15, 226, 173);
 }
+
+
+.bg-image {
+  background-attachment: fixed;
+  background: url("../../assets/bg.svg") no-repeat;
+}
