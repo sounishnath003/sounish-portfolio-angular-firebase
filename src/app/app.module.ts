@@ -10,6 +10,9 @@ import { DevelopementBackpackComponent } from './home/developementBackpack/devel
 import { TechnologyComponent } from './home/developementBackpack/technology/technology.component';
 import { ToolsIuseComponent } from './home/toolsIuse/toolsIuse.component';
 import { FooterComponent } from './footer/footer.component';
+import { SortcutSkillsComponent } from './sortcutSkills/sortcutSkills.component';
+import { AboutComponent } from './about/about.component';
+import { HomepagecontentComponent } from './homepagecontent/homepagecontent.component';
 
 @NgModule({
    declarations: [
@@ -20,7 +23,10 @@ import { FooterComponent } from './footer/footer.component';
       DevelopementBackpackComponent,
       TechnologyComponent,
       ToolsIuseComponent,
-      FooterComponent
+      FooterComponent,
+      SortcutSkillsComponent,
+      AboutComponent,
+      HomepagecontentComponent
    ],
    imports: [
       BrowserModule,
