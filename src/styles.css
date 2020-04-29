@@ -9,6 +9,19 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+ .bg-image {
+  background-attachment: fixed;
+  background: url("src/assets/bg.svg") no-repeat;
+}
+
+.text-green-theme {
+  color: rgb(15, 161, 161);
+}
+
+.text-green-dark-theme {
+  color: rgb(31, 40, 168);
+}
+
 
 
 html {
