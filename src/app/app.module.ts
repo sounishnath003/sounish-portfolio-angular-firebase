@@ -8,6 +8,8 @@ import { SkillsetComponent } from './home/skillset/skillset.component';
 import { ABitAboutComponent } from './home/aBitAbout/aBitAbout.component';
 import { DevelopementBackpackComponent } from './home/developementBackpack/developementBackpack.component';
 import { TechnologyComponent } from './home/developementBackpack/technology/technology.component';
+import { ToolsIuseComponent } from './home/toolsIuse/toolsIuse.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
    declarations: [
@@ -16,7 +18,9 @@ import { TechnologyComponent } from './home/developementBackpack/technology/tech
       SkillsetComponent,
       ABitAboutComponent,
       DevelopementBackpackComponent,
-      TechnologyComponent
+      TechnologyComponent,
+      ToolsIuseComponent,
+      FooterComponent
    ],
    imports: [
       BrowserModule,
