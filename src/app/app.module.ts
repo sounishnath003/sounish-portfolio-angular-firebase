@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MatCard } from '@angular/material/card';
 import { YoutubecardComponent } from './about/profilecard/youtubecard/youtubecard.component';
+import { ResumeComponent } from './about/resume/resume.component';
+import { HerosectionComponent } from './herosection/herosection.component';
 
 @NgModule({
    declarations: [
@@ -33,7 +35,9 @@ import { YoutubecardComponent } from './about/profilecard/youtubecard/youtubecar
       AboutComponent,
       HomepagecontentComponent,
       ProfilecardComponent,
-      YoutubecardComponent
+      YoutubecardComponent,
+      ResumeComponent,
+      HerosectionComponent
    ],
    imports: [
       BrowserModule,
@@ -42,7 +46,7 @@ import { YoutubecardComponent } from './about/profilecard/youtubecard/youtubecar
       MaterialModule
    ],
    providers: [
-     MatCard
+      MatCard
    ],
    bootstrap: [
       AppComponent

@@ -1,12 +1,4 @@
-<div class="px-64">
-  <div class="bg-image">
-    <div class="pb-12 mb-4 pt-16 relative">
-      <div class="content px-8 md:px-16 max-w-xl">
-        <h1 class="text-5xl font-black">Bit more about me</h1>
-      </div>
-    </div>
-  </div>
-</div>
+<app-herosection title="Bit more about me" subtitle="The craziest developer out there." ></app-herosection>
 
 <div class="mt-20">
   <div class="p-0">
@@ -35,11 +27,11 @@
               >
                 Would you like to know more about my experience?
               </h2>
-              <a
-                class="text-black px-4 py-4 rounded bg-green-300 hover:underline"
-                href="#"
+              <div
+                [routerLink]="['resume']" routerLinkActive="router-link-active"
+                class="text-black inline px-4 py-4 rounded bg-green-300 hover:underline"
                 data-config-id="primary-action"
-                >Check Resume »</a
+                >Check Resume »</div
               >
             </div>
           </section>

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
+  MatDialog
 } from '@angular/material/dialog';
 import { YoutubecardComponent } from './youtubecard/youtubecard.component';
 
@@ -20,7 +18,7 @@ export class ProfilecardComponent implements OnInit {
 
   openDialog() {
     return this.dialog.open(YoutubecardComponent, {
-      width: '600px',
+      width: '670px',
       data: {}
     });
   }
