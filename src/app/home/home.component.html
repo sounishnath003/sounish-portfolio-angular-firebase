@@ -2,7 +2,11 @@
   <div
     class="flex flex-wrap justify-between text-gray-700 flex-col md:flex-row"
   >
-    <div [routerLink]="['/home']" routerLinkActive="router-link-active"  class="text-center cursor-pointer w-24 h-24 mb-8 md:mb-0 m-auto">
+    <div
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+      class="text-center cursor-pointer w-24 h-24 mb-8 md:mb-0 m-auto"
+    >
       <img
         src="../../assets/logo.png"
         alt="logo"
@@ -13,64 +17,17 @@
       <div class="flex flex-wrap cursor-pointer justify-evenly">
         <div class="text-center m-auto uppercase font-bold mr-8">blog</div>
         <div class="text-center m-auto uppercase font-bold mr-8">projects</div>
-        <div [routerLink]="['/about']" routerLinkActive="router-link-active"  class="text-center m-auto uppercase font-bold mr-8">about</div>
+        <div
+          [routerLink]="['/about']"
+          routerLinkActive="router-link-active"
+          class="text-center m-auto uppercase font-bold mr-8"
+        >
+          about
+        </div>
         <div class="text-center m-auto uppercase font-bold mr-8">catch me</div>
       </div>
     </div>
   </div>
-
-
-
-
-  <div class="bg-image mb-4">
-    <div
-      class="mt-10 text-5xl font-bold max-w-3xl m-auto mx-auto text-indigo-700"
-    >
-      <div class="" style="color: #0e3e3b;">
-        <div role="presentation" class="titlecase tracking-loose leading-loose">
-          Hello, <span style="color: rgb(15, 161, 161);">I'm Sounish,</span>
-        </div>
-        <div role="presentation" class="titlecase tracking-loose leading-loose">
-          Backend & Frontend Developer Based in Kolkata, India.
-        </div>
-      </div>
-    </div>
-
-  </div>
 </div>
 
 <router-outlet></router-outlet>
-
-<!-- <div class="mt-8 bg-gray-100">
-  <app-aBitAbout></app-aBitAbout>
-
-  <div class="p-8 rounded-lg mt-10 max-w-4xl m-auto">
-    <app-skillset></app-skillset>
-  </div>
-
-  <div class="p-8 rounded-lg mt-10 max-w-4xl m-auto">
-    <app-developementBackpack></app-developementBackpack>
-  </div>
-
-  <div class="mt-12">
-    <app-toolsIuse></app-toolsIuse>
-  </div>
-</div>
-
-<div class="mt-8 mb-8">
-  <div class="lg:py-8">
-    <div
-      class="mx-auto px-8 border border-black shadow-xl md:px-16 max-w-2xl bg-contact-gradiant md:rounded-lg"
-    >
-      <h3
-        class="text-2xl font-normal leading-normal py-8 text-gray-800 break-words"
-      >
-        If you need more details, feel free to email me.<br /><a
-          href="mailto:flock.sinasini@gmail.com"
-          class="text-white"
-          >flock.sinasini@gmail.com →</a
-        >
-      </h3>
-    </div>
-  </div>
-</div> -->
