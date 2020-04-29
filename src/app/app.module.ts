@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SortcutSkillsComponent } from './sortcutSkills/sortcutSkills.component';
 import { AboutComponent } from './about/about.component';
 import { HomepagecontentComponent } from './homepagecontent/homepagecontent.component';
+import { ProfilecardComponent } from './about/profilecard/profilecard.component';
 
 @NgModule({
    declarations: [
@@ -26,7 +27,8 @@ import { HomepagecontentComponent } from './homepagecontent/homepagecontent.comp
       FooterComponent,
       SortcutSkillsComponent,
       AboutComponent,
-      HomepagecontentComponent
+      HomepagecontentComponent,
+      ProfilecardComponent
    ],
    imports: [
       BrowserModule,
