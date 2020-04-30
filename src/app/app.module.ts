@@ -20,6 +20,7 @@ import { MatCard } from '@angular/material/card';
 import { YoutubecardComponent } from './about/profilecard/youtubecard/youtubecard.component';
 import { ResumeComponent } from './about/resume/resume.component';
 import { HerosectionComponent } from './herosection/herosection.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
    declarations: [
@@ -37,7 +38,8 @@ import { HerosectionComponent } from './herosection/herosection.component';
       ProfilecardComponent,
       YoutubecardComponent,
       ResumeComponent,
-      HerosectionComponent
+      HerosectionComponent,
+      ProjectsComponent
    ],
    imports: [
       BrowserModule,

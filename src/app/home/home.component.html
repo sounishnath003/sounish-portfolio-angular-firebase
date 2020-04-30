@@ -16,7 +16,7 @@
     <div class="text-center m-auto">
       <div class="flex flex-wrap cursor-pointer justify-evenly">
         <div class="text-center m-auto uppercase font-bold mr-8">blog</div>
-        <div class="text-center m-auto uppercase font-bold mr-8">projects</div>
+        <div [routerLink]="['/projects']" routerLinkActive="router-link-active"  class="text-center m-auto uppercase font-bold mr-8">projects</div>
         <div
           [routerLink]="['/about']"
           routerLinkActive="router-link-active"
