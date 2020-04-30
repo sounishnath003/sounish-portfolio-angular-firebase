@@ -22,6 +22,7 @@ import { ResumeComponent } from './about/resume/resume.component';
 import { HerosectionComponent } from './herosection/herosection.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectcardComponent } from './projects/projectcard/projectcard.component';
+import { ProjectcardDetailsComponent } from './projects/projectcard/projectcard-details/projectcard-details.component';
 
 @NgModule({
    declarations: [
@@ -41,7 +42,8 @@ import { ProjectcardComponent } from './projects/projectcard/projectcard.compone
       ResumeComponent,
       HerosectionComponent,
       ProjectsComponent,
-      ProjectcardComponent
+      ProjectcardComponent,
+      ProjectcardDetailsComponent
    ],
    imports: [
       BrowserModule,

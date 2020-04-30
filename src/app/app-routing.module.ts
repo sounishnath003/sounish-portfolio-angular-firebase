@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
 import { HomepagecontentComponent } from './homepagecontent/homepagecontent.component';
 import { ResumeComponent } from './about/resume/resume.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectcardDetailsComponent } from './projects/projectcard/projectcard-details/projectcard-details.component';
 
 
 const routes: Routes = [
@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'projects',
     component: ProjectsComponent,
+  },
+  {
+    path: 'projects/project-details',
+    component: ProjectcardDetailsComponent,
   },
   {
     path: 'about/resume',
