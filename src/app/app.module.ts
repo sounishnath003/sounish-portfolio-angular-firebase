@@ -21,6 +21,7 @@ import { YoutubecardComponent } from './about/profilecard/youtubecard/youtubecar
 import { ResumeComponent } from './about/resume/resume.component';
 import { HerosectionComponent } from './herosection/herosection.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectcardComponent } from './projects/projectcard/projectcard.component';
 
 @NgModule({
    declarations: [
@@ -39,7 +40,8 @@ import { ProjectsComponent } from './projects/projects.component';
       YoutubecardComponent,
       ResumeComponent,
       HerosectionComponent,
-      ProjectsComponent
+      ProjectsComponent,
+      ProjectcardComponent
    ],
    imports: [
       BrowserModule,

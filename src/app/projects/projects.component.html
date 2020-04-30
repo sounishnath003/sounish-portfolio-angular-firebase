@@ -8,20 +8,38 @@
 <div class="mt-16 m-auto bg-gray-100">
   <div>
     <div class="p-8 rounded-lg mt-10 max-w-4xl m-auto">
-      <div class="text-left text-4xl font-bold">All about projects —</div>
+      <div class="-mt-20 mb-20">
+        <div
+          class="flex flex-col bg-indigo-600 px-8 py-6 max-w-md float-right mx-auto rounded-lg shadow-lg"
+        >
+          <div class="flex justify-center items-center">
+            <a class="px-2 py-1 bg-white text-sm text-black rounded">Quotes </a>
+          </div>
+          <div class="mt-4">
+            <a class="text-lg text-white font-medium" href="#">
+              I mainly work on various <b>technologies</b> in Software and Web
+              development with Rails, Angular, Vue & built my freelancing
+              skills.
+            </a>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center">
+              <img
+                src="../../assets/sounish.jpg"
+                class="w-8 h-8 object-cover rounded-full"
+                alt="avatar"
+              />
+              <a class="text-white text-sm mx-3">Sounish Nath</a>
+            </div>
+            <span class="font-light text-sm text-white">{{ date }}</span>
+          </div>
+        </div>
+      </div>
       <div class="mt-5 md:mt-8">
         <div
           style="color: #0e3e3b;"
-          class="w-3/4 text-xl leading-normal tracking-loose"
+          class="w-3/4 mt-10 text-xl leading-normal tracking-loose"
         >
-          <div class="text">
-            I mainly work on various <b>technologies</b> in Software and Web
-            development with
-            <span class="text-green-theme"> Rails, Angular, Vue </span>
-            <span class="text-green-theme">
-              & built my freelancing skills.
-            </span>
-          </div>
           <div class="text mt-6">
             I am passionate about technology, always willing to learn new skills
             and in love with what I do. ❤️ 💻️
@@ -33,8 +51,16 @@
         </div>
       </div>
     </div>
-    <div class="mt-10 max-w-4xl m-auto p-8 ">
-      Hello World
+    <div class="mt-10 max-w-4xl m-auto p-8">
+      <div class="text-left text-4xl font-bold">Projects I did —</div>
+    </div>
+
+    <!-- projects section -->
+
+    <div class="mt-5 max-w-4xl- m-auto md:mt-8 px-2">
+      <div class="flex flex-wrap flex-col md:flex-row justify-evenly">
+        <app-projectcard></app-projectcard>
+      </div>
     </div>
   </div>
 </div>

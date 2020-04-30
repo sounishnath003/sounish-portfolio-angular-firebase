@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  date: any ;
+  dt: Date = new Date() ;
 
-  constructor() { }
+  constructor() {
+    this.date = this.dt.getMonth() + ' ' + this.dt.getDate() + ', ' + this.dt.getFullYear() ;
+   }
 
   ngOnInit() {
   }
