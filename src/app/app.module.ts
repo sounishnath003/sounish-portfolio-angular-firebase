@@ -23,39 +23,38 @@ import { HerosectionComponent } from './herosection/herosection.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectcardComponent } from './projects/projectcard/projectcard.component';
 import { ProjectcardDetailsComponent } from './projects/projectcard/projectcard-details/projectcard-details.component';
+import { GithubService } from './services/github.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      HomeComponent,
-      SkillsetComponent,
-      ABitAboutComponent,
-      DevelopementBackpackComponent,
-      TechnologyComponent,
-      ToolsIuseComponent,
-      FooterComponent,
-      SortcutSkillsComponent,
-      AboutComponent,
-      HomepagecontentComponent,
-      ProfilecardComponent,
-      YoutubecardComponent,
-      ResumeComponent,
-      HerosectionComponent,
-      ProjectsComponent,
-      ProjectcardComponent,
-      ProjectcardDetailsComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      MaterialModule
-   ],
-   providers: [
-      MatCard
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    SkillsetComponent,
+    ABitAboutComponent,
+    DevelopementBackpackComponent,
+    TechnologyComponent,
+    ToolsIuseComponent,
+    FooterComponent,
+    SortcutSkillsComponent,
+    AboutComponent,
+    HomepagecontentComponent,
+    ProfilecardComponent,
+    YoutubecardComponent,
+    ResumeComponent,
+    HerosectionComponent,
+    ProjectsComponent,
+    ProjectcardComponent,
+    ProjectcardDetailsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    HttpClientModule
+  ],
+  providers: [ MatCard, GithubService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
