@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Repostitory } from 'src/app/services/repostitory';
 
 @Component({
   selector: 'app-projectcard-details',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projectcard-details.component.css']
 })
 export class ProjectcardDetailsComponent implements OnInit {
+  @Input() repoDetails: Repostitory ;
 
   constructor() { }
 

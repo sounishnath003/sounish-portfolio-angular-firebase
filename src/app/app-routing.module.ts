@@ -27,7 +27,7 @@ const routes: Routes = [
     component: ProjectsComponent,
   },
   {
-    path: 'projects/project-details',
+    path: 'projects/project-details/:repoName',
     component: ProjectcardDetailsComponent,
   },
   {
