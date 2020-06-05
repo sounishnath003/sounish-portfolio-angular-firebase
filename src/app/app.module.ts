@@ -26,6 +26,13 @@ import { ProjectcardDetailsComponent } from './projects/projectcard/projectcard-
 import { GithubService } from './services/github.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+
+// for firebase setup
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireDatabase, AngularFireDatabaseModule } from "@angular/fire/database";
+import { environment } from "../environments/environment";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +55,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ProjectcardDetailsComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
