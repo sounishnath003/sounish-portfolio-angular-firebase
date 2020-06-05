@@ -32,6 +32,7 @@ export interface License {
 
 export interface Repostitory {
   id: string,
+  author: string,
   author_url: string,
   created_at: string,
   description: string,
