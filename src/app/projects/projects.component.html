@@ -1,4 +1,3 @@
-
 <div>
   <app-herosection
     title="It's about projects"
@@ -47,7 +46,8 @@
           </div>
           <div class="text mt-6">
             I've pinned all on <span class="text-green-theme">GitHub & </span> ·
-            show cased on <span class="text-green-theme"> Instagram, Facebook. </span>
+            show cased on
+            <span class="text-green-theme"> Instagram, Facebook. </span>
           </div>
         </div>
       </div>
@@ -58,13 +58,15 @@
 
     <!-- projects section -->
 
-    {{ allRepos | json }}
-
-    <div class="mt-5 max-w-4xl- m-auto md:mt-8 px-2 ">
-      <div class="flex flex-wrap flex-col md:flex-row justify-evenly"  >
-        <div class="m-auto mb-3 text-left" *ngFor="let epoData of allRepositoryData" >
-          <app-projectcard [routerLink]="['/projects/project-details/', epoData.name]"
-            routerLinkActive="router-link-active"  routerLinkActive="router-link-active" repoData={{epoData.name}} ></app-projectcard>
+    <div class="mt-5 max-w-4xl- m-auto md:mt-8 px-2">
+      <div class="flex flex-wrap flex-col md:flex-row justify-evenly">
+        <div class="m-auto mb-3 text-left" *ngFor="let epoData of allRepos">
+          <app-projectcard
+            [routerLink]="['/projects/project-details/', epoData.name]"
+            routerLinkActive="router-link-active"
+            routerLinkActive="router-link-active"
+            [repoDetail]="epoData"
+          ></app-projectcard>
         </div>
       </div>
     </div>

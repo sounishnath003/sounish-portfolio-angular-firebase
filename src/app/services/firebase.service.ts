@@ -11,7 +11,7 @@ export class FirebaseService {
   constructor(private _firestore: AngularFirestore) { }
 
   getReposFromFireBase() {
-    return this._firestore.collection<Repostitory>('repos').valueChanges() ;
+    return this._firestore.collection<Repostitory>('repos').snapshotChanges() ;
   }
 
 }

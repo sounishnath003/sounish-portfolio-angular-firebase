@@ -7,12 +7,9 @@ import { Repostitory } from 'src/app/services/repostitory';
   styleUrls: ['./projectcard.component.css'],
 })
 export class ProjectcardComponent implements OnInit {
-  @Input() repoData ;
+  @Input() repoDetail: Repostitory ;
 
-  constructor() {
-    console.log(this.repoData);
-
-  }
+  constructor() { }
 
   ngOnInit() {}
 }

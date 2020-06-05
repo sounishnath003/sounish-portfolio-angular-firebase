@@ -3,6 +3,7 @@ import { GithubService } from '../services/github.service';
 import { Repostitory } from '../services/repostitory';
 import { ApiData } from '../services/apiData';
 import { FirebaseService } from '../services/firebase.service';
+import { fadeInItems } from '@angular/material/menu';
 
 @Component({
   selector: 'app-projects',
@@ -12,16 +13,16 @@ import { FirebaseService } from '../services/firebase.service';
 export class ProjectsComponent implements OnInit {
   date: any;
   dt: Date = new Date();
-  allData: Repostitory[];
-  allRepositoryData: Repostitory;
   allRepos: Repostitory[];
 
-  constructor(
-    private githubServices: GithubService,
-    private _firebaseService: FirebaseService
-  ) {
+  constructor(private _firebaseService: FirebaseService) {
     this.calculateDate();
-    this.getReopos();
+  }
+
+  ngOnInit() {
+    this._getAllReposFromFirebase();
+    console.log(this.allRepos);
+    
   }
 
   calculateDate() {
@@ -33,19 +34,15 @@ export class ProjectsComponent implements OnInit {
       this.dt.getFullYear());
   }
 
-  getReopos() {
-    this.githubServices.fetchRepoData().subscribe((res) => {
-      this.allRepositoryData = res;
-    });
-  }
-
+  // Calling Firebase
   _getAllReposFromFirebase() {
     this._firebaseService.getReposFromFireBase().subscribe((res) => {
-        this.allRepos = res ;
+      this.allRepos = res.map(items => {
+        return {
+          id: items.payload.doc.id,
+          ...items.payload.doc.data()
+        } as Repostitory 
+      });
     });
-  }
-
-  ngOnInit() {
-    this._getAllReposFromFirebase() ;
   }
 }
