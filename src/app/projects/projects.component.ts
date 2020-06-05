@@ -17,11 +17,12 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private _firebaseService: FirebaseService) {
     this.calculateDate();
+    console.log(this.allRepos);
   }
 
   ngOnInit() {
     this._getAllReposFromFirebase();
-    console.log(this.allRepos);
+    
     
   }
 

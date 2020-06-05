@@ -62,7 +62,7 @@
       <div class="flex flex-wrap flex-col md:flex-row justify-evenly">
         <div class="m-auto mb-3 text-left" *ngFor="let epoData of allRepos">
           <app-projectcard
-            [routerLink]="['/projects/project-details/', epoData.name]"
+            [routerLink]="['/projects/project-details/', epoData.id, epoData.name]"
             routerLinkActive="router-link-active"
             routerLinkActive="router-link-active"
             [repoDetail]="epoData"

@@ -12,6 +12,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class ProjectcardDetailsComponent implements OnInit {
   @Input() repoDetails: Repostitory ;
   repo_name_url: string ;
+  _docId: any ;
+  repoDetail: Repostitory ;
 
   constructor(private _router : ActivatedRoute, private _firestore: AngularFirestore) {
     
@@ -19,7 +21,14 @@ export class ProjectcardDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.repo_name_url = this._router.snapshot.paramMap.get('repoName');
-    this._firestore.collection('repos').get()
+    this._docId = this._router.snapshot.paramMap.get('docId');
+    this._fetchCurRepoDetails(this._docId) ;
+  }
+
+  _fetchCurRepoDetails(docId: any) {
+    this._firestore.collection('repos').doc(docId).get().subscribe(res => {
+     return this.repoDetail = res.data() as Repostitory ;
+    })
   }
 
 }
