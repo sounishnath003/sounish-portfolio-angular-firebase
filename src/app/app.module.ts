@@ -31,6 +31,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireDatabase, AngularFireDatabaseModule } from "@angular/fire/database";
 import { environment } from "../environments/environment";
+import { FirebaseService } from './services/firebase.service';
 
 
 @NgModule({
@@ -63,7 +64,7 @@ import { environment } from "../environments/environment";
     MaterialModule,
     HttpClientModule
   ],
-  providers: [ MatCard, GithubService],
+  providers: [ MatCard, GithubService, FirebaseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

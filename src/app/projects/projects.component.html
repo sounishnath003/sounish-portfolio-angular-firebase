@@ -58,6 +58,8 @@
 
     <!-- projects section -->
 
+    {{ allRepos | json }}
+
     <div class="mt-5 max-w-4xl- m-auto md:mt-8 px-2 ">
       <div class="flex flex-wrap flex-col md:flex-row justify-evenly"  >
         <div class="m-auto mb-3 text-left" *ngFor="let epoData of allRepositoryData" >

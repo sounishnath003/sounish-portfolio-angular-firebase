@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../services/github.service';
 import { Repostitory } from '../services/repostitory';
 import { ApiData } from '../services/apiData';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,10 +12,14 @@ import { ApiData } from '../services/apiData';
 export class ProjectsComponent implements OnInit {
   date: any;
   dt: Date = new Date();
-  allData: Repostitory[] ;
+  allData: Repostitory[];
   allRepositoryData: Repostitory;
+  allRepos: Repostitory[];
 
-  constructor(private githubServices: GithubService) {
+  constructor(
+    private githubServices: GithubService,
+    private _firebaseService: FirebaseService
+  ) {
     this.calculateDate();
     this.getReopos();
   }
@@ -29,10 +34,18 @@ export class ProjectsComponent implements OnInit {
   }
 
   getReopos() {
-    this.githubServices.fetchRepoData().subscribe(res => {
-      this.allRepositoryData = res ;
+    this.githubServices.fetchRepoData().subscribe((res) => {
+      this.allRepositoryData = res;
     });
   }
 
-  ngOnInit() {}
+  _getAllReposFromFirebase() {
+    this._firebaseService.getReposFromFireBase().subscribe((res) => {
+        this.allRepos = res ;
+    });
+  }
+
+  ngOnInit() {
+    this._getAllReposFromFirebase() ;
+  }
 }
