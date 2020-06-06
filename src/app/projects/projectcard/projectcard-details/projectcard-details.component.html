@@ -225,7 +225,7 @@
         <div
           class="text-3xl mt-8 mb-4 text-black font-bold leading-normal border-b-2 inline-block"
         >
-          🎉 YouTube Video & Details
+          🎉 YouTube Video & Tech Stacks
         </div>
 
         <div class="flex flex-wrap md:flex-row flex-col justify-evenly">
@@ -260,7 +260,8 @@
                       </div>
                     </div>
                     <div class="mt-4 flex">
-                      <span class="text-black font-black px-2 rounded bg-yellow-400"
+                      <span
+                        class="text-black font-black px-2 rounded bg-yellow-400"
                         >git_clone:~$</span
                       >
                       <p class="flex-1 typing items-center pl-2">
@@ -269,7 +270,8 @@
                       </p>
                     </div>
                     <div class="mt-2 flex">
-                      <span class="text-black font-black rounded bg-red-400 px-2"
+                      <span
+                        class="text-black font-black rounded bg-red-400 px-2"
                         >license:~$</span
                       >
                       <p class="flex-1 typing items-center pl-2">
@@ -292,12 +294,13 @@
                 <div
                   class="flex flex-col border-indigo-600 border-2 bg-white px-8 py-6 max-w-md mx-auto rounded-lg shadow-xl"
                 >
-                <div class="text-xl word-break">Tech Stacks</div>
+                  <div class="text-xl word-break">Tech Stacks</div>
                   <div class="flex justify-center items-center">
                     <div *ngFor="let tag of repoDetail.tech_stack">
                       <a
                         class="px-2 cursor-pointer hover:bg-indigo-300 py-1 bg-indigo-600 text-sm text-white mr-2 rounded"
-                        >{{ tag }}</a>
+                        >{{ tag }}</a
+                      >
                     </div>
                   </div>
                   <div class="mt-4">
@@ -305,20 +308,31 @@
                       >Build Your New Idea with Technologies. ⭐</a
                     >
                   </div>
+                  <div class="mt-4">
+                    <div class="text-xl word-break">Used languages</div>
+                    <div class="flex justify-center items-center">
+                      <div *ngFor="let language of repoDetail.languages">
+                        <a
+                          class="px-2 cursor-pointer hover:bg-red-300 py-1 bg-red-400 text-sm text-white mr-2 rounded"
+                          >{{ language }}</a
+                        >
+                      </div>
+                    </div>
+                  </div>
                   <div class="flex justify-between items-center mt-4">
                     <div class="flex items-center">
                       <img
-                        [src]=repoDetail.gravatar
+                        [src]="repoDetail.gravatar"
                         class="w-8 h-8 object-cover rounded-full"
                         alt="avatar"
                       />
-                      <a class="text-gray-700 text-sm mx-3" href="#"
-                        >{{ repoDetail.author }}</a
-                      >
+                      <a class="text-gray-700 text-sm mx-3" href="#">{{
+                        repoDetail.author
+                      }}</a>
                     </div>
-                    <span class="font-light text-sm text-gray-600"
-                      >{{ repoDetail.created_at }}</span
-                    >
+                    <span class="font-light text-sm text-gray-600">{{
+                      repoDetail.created_at
+                    }}</span>
                   </div>
                 </div>
               </div>
@@ -329,11 +343,16 @@
 
       <div class="mt-12">
         <app-course-card></app-course-card>
-        <div *ngFor="let language of repoDetail.tags" >
-
+        <div class="mt-16">
+          <div class="m-auto mx-auto text-center">
+            <div class="flex flex-wrap flex-col md:flex-row justify-evenly">
+              <div class="m-auto cursor-pointer hover:bg-blue-800 hover:text-white px-5 py-2 rounded shadow bg-gray-100 text-gray-800 " *ngFor="let tag of repoDetail.tags">
+                {{ tag }}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
 
     <!--Author-->
@@ -366,4 +385,62 @@
     </div>
     <!--/Author-->
   </div>
+</div>
+
+
+<div class="container px-4 md:px-0 max-w-6xl mx-auto">
+  <section class="text-gray-700 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="-my-8">
+      <div class="py-8 flex flex-wrap md:flex-no-wrap">
+        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          <span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
+          <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+        </div>
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Bitters hashtag waistcoat fashion axe chia unicorn</h2>
+          <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+          <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="py-8 flex border-t-2 border-gray-200 flex-wrap md:flex-no-wrap">
+        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          <span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
+          <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+        </div>
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Meditation bushwick direct trade taxidermy shaman</h2>
+          <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+          <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="py-8 flex border-t-2 border-gray-200 flex-wrap md:flex-no-wrap">
+        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          <span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
+          <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+        </div>
+        <div class="md:flex-grow">
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Woke master cleanse drinking vinegar salvia</h2>
+          <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+          <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
+            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
