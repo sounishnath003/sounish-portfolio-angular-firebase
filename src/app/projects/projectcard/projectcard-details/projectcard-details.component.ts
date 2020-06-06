@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Repostitory } from 'src/app/services/repostitory';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
 @Component({
@@ -14,8 +15,10 @@ export class ProjectcardDetailsComponent implements OnInit {
   repo_name_url: string ;
   _docId: any ;
   repoDetail: Repostitory ;
+  youtube_link: string ;
+  urlSafe: SafeResourceUrl ;
 
-  constructor(private _router : ActivatedRoute, private _firestore: AngularFirestore) {
+  constructor(private _router : ActivatedRoute, private _firestore: AngularFirestore, public _santizier: DomSanitizer) {
     
   }
 
@@ -27,7 +30,11 @@ export class ProjectcardDetailsComponent implements OnInit {
 
   _fetchCurRepoDetails(docId: any) {
     this._firestore.collection('repos').doc(docId).get().subscribe(res => {
-     return this.repoDetail = res.data() as Repostitory ;
+     this.repoDetail = res.data() as Repostitory ;
+     this.youtube_link = this.repoDetail.youtube_link ;
+     this.urlSafe = this._santizier.bypassSecurityTrustResourceUrl(
+       this.youtube_link
+     );
     }) ;
   }
 
