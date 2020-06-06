@@ -28,7 +28,7 @@
             <li class="mr-2">
               <div class="flex flex-wrap flex-col justify-evenly">
                 <a
-                  class="inline-block text-gray-800  no-underline hover:underline py-2 px-2"
+                  class="inline-block text-gray-800 no-underline hover:underline py-2 px-2"
                   href="#"
                   >{{ repoDetail.author }}</a
                 >
@@ -69,11 +69,7 @@
             data-tippy-content="@linkedin_handle"
             href="https://www.linkedin.com/in/sounish-nath-897b30186/"
           >
-            <svg
-              viewBox="0 0 32 32"
-              fill="none"
-              class="fill-current h-6"
-            >
+            <svg viewBox="0 0 32 32" fill="none" class="fill-current h-6">
               <path
                 d="M5 6.36C5 5.61 5.63 5 6.4 5h16.2c.77 0 1.4.61 1.4 1.36v16.28c0 .75-.63 1.36-1.4 1.36H6.4c-.77 0-1.4-.6-1.4-1.36V6.36z"
               ></path>
@@ -169,20 +165,82 @@
         {{ repoDetail.description }}
       </div>
 
-      <div class="mt-4 p-3">
-        <img [src]=repoDetail.image [alt]=repoDetail.image class="border-black border shadow-xl rounded-lg " >
+      <div class="mt-4 p-3 mb-8">
+        <img
+          [src]="repoDetail.image"
+          [alt]="repoDetail.image"
+          class="border-black border shadow-xl rounded-lg"
+        />
+        <div class="text-center text-black text-base text-sm m-3">
+          <b class="">GitHub</b> &#183; {{ repoDetail.author }} &#183;
+          {{ repoDetail.created_at }}
+        </div>
       </div>
 
       <div
-        class="mt-3 p-3 rounded m-auto text-center mx-auto bg-indigo-600 text-xl"
+        class="text-3xl text-black font-bold leading-normal border-b-2 inline-block"
       >
-        <q class="text-white text-center"> {{ repoDetail.quote }} </q>
+        🎉 Idealisation
       </div>
 
       <div
-        class="mt-3 p-3 rounded m-auto text-center mx-auto bg-transparent text-xl"
+        class="mt-6 p-3 rounded-lg m-auto text-center mx-auto bg-black text-xl"
       >
-        <iframe width="560" height="315" [src]=urlSafe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <q class="text-white text-center"> {{ repoDetail.quote }}  </q> -->
+        <section class="py-10 text-white body-font">
+          <div class="container mx-auto">
+            <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="yellow"
+                class="inline-block w-8 h-8 text-gray-400 mb-8"
+                viewBox="0 0 975.036 975.036"
+              >
+                <path
+                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                ></path>
+              </svg>
+              <p class="leading-relaxed text-lg">
+                🎉 {{ repoDetail.quote }} ✨💖
+              </p>
+              <span
+                class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"
+              ></span>
+              <h2
+                class="text-yellow-400 font-medium title-font tracking-wider text-sm"
+              >
+                {{ repoDetail.author }}
+              </h2>
+              <p class="text-yellow-400">Full Stack Developer</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-8 rounded bg-transparent text-xl">
+        <div
+          class="text-3xl mt-8 mb-4 text-black font-bold leading-normal border-b-2 inline-block"
+        >
+          🎉 YouTube Link
+        </div>
+
+        <div class="flex flex-wrap md:flex-row flex-col justify-evenly">
+          <div class="m-auto text-center">
+            <iframe
+              class="m-auto rounded-lg shadow-2xl p-3"
+              width="720"
+              height="480"
+              [src]="urlSafe"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="m-auto text-center">
+            <!-- {{repoDetail.tags}} -->
+            hello world
+          </div>
+        </div>
       </div>
     </div>
 

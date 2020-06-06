@@ -17,6 +17,8 @@ export class ProjectcardDetailsComponent implements OnInit {
   repoDetail: Repostitory ;
   youtube_link: string ;
   urlSafe: SafeResourceUrl ;
+  github_projectUrl: string ;
+  githubUrlSafe: SafeResourceUrl ;
 
   constructor(private _router : ActivatedRoute, private _firestore: AngularFirestore, public _santizier: DomSanitizer) {
     
@@ -32,9 +34,11 @@ export class ProjectcardDetailsComponent implements OnInit {
     this._firestore.collection('repos').doc(docId).get().subscribe(res => {
      this.repoDetail = res.data() as Repostitory ;
      this.youtube_link = this.repoDetail.youtube_link ;
+     this.github_projectUrl = this.repoDetail.project_url ;
      this.urlSafe = this._santizier.bypassSecurityTrustResourceUrl(
        this.youtube_link
      );
+     this.githubUrlSafe = this._santizier.bypassSecurityTrustResourceUrl(this.github_projectUrl) ;
     }) ;
   }
 
