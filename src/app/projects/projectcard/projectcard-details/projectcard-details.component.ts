@@ -28,7 +28,7 @@ export class ProjectcardDetailsComponent implements OnInit {
   _fetchCurRepoDetails(docId: any) {
     this._firestore.collection('repos').doc(docId).get().subscribe(res => {
      return this.repoDetail = res.data() as Repostitory ;
-    })
+    }) ;
   }
 
 }

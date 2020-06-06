@@ -1,10 +1,9 @@
 <div>
   <app-herosection
-    title={{repo_name_url}}
-    [subtitle]=repoDetail.sortDesc
+    title="{{ repo_name_url }}"
+    [subtitle]="repoDetail.sortDesc"
   ></app-herosection>
 </div>
-
 
 <div class="container px-4 md:px-0 max-w-6xl mx-auto mt-20">
   <div class="mx-0 sm:mx-6">
@@ -16,41 +15,44 @@
             class="list-reset flex justify-between flex-1 md:flex-none items-center"
           >
             <li class="mr-2">
-              <a
-                class="inline-block py-2 px-2 text-white no-underline hover:underline"
+              <!-- <a
+                class="inline-block py-2 px-2 no-underline hover:underline"
                 href="post.html"
-                >POST</a
-              >
+                >POST</a -->
+              <img
+                [src]="repoDetail.gravatar"
+                class="w-10 rounded-full"
+                [alt]="repoDetail.gravatar"
+              />
+            </li>
+            <li class="mr-2">
+              <div class="flex flex-wrap flex-col justify-evenly">
+                <a
+                  class="inline-block text-gray-800  no-underline hover:underline py-2 px-2"
+                  href="#"
+                  >{{ repoDetail.author }}</a
+                >
+                <div class="div text-indigo-700 m-auto">
+                  {{ repoDetail.created_at }} &#183; 6 min read ⭐
+                </div>
+              </div>
             </li>
             <li class="mr-2">
               <a
-                class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
-                href="#"
-                >LINK</a
+                [href]="repoDetail.author_url"
+                class="border-indigo-600 no-underline border px-3 cursor-pointer hover:bg-indigo-600 hover:text-white rounded-lg"
               >
-            </li>
-            <li class="mr-2">
-              <a
-                class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
-                href="#"
-                >LINK</a
-              >
-            </li>
-            <li class="mr-2">
-              <a
-                class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
-                href="#"
-                >LINK</a
-              >
+                Follow
+              </a>
             </li>
           </ul>
         </div>
 
         <div class="flex w-1/2 justify-end content-center">
           <a
-            class="inline-block text-gray-500 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
+            class="inline-block text-indigo-500 no-underline hover:text-indigo-700 hover:text-underline text-center h-12 p-2 md:h-auto md:p-4 avatar"
             data-tippy-content="@twitter_handle"
-            href="https://twitter.com/intent/tweet?url=#"
+            href="https://twitter.com/sounish1"
           >
             <svg
               class="fill-current h-4"
@@ -63,9 +65,30 @@
             </svg>
           </a>
           <a
-            class="inline-block text-gray-500 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
+            class="inline-block text-indigo-500 no-underline hover:text-indigo-700 hover:text-underline text-center h-12 p-2 md:h-auto md:p-4 avatar"
+            data-tippy-content="@linkedin_handle"
+            href="https://www.linkedin.com/in/sounish-nath-897b30186/"
+          >
+            <svg
+              viewBox="0 0 32 32"
+              fill="none"
+              class="fill-current h-6"
+            >
+              <path
+                d="M5 6.36C5 5.61 5.63 5 6.4 5h16.2c.77 0 1.4.61 1.4 1.36v16.28c0 .75-.63 1.36-1.4 1.36H6.4c-.77 0-1.4-.6-1.4-1.36V6.36z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.76 20.9v-8.57H7.89v8.58h2.87zm-1.44-9.75c1 0 1.63-.65 1.63-1.48-.02-.84-.62-1.48-1.6-1.48-.99 0-1.63.64-1.63 1.48 0 .83.62 1.48 1.59 1.48h.01zM12.35 20.9h2.87v-4.79c0-.25.02-.5.1-.7.2-.5.67-1.04 1.46-1.04 1.04 0 1.46.8 1.46 1.95v4.59h2.87v-4.92c0-2.64-1.42-3.87-3.3-3.87-1.55 0-2.23.86-2.61 1.45h.02v-1.24h-2.87c.04.8 0 8.58 0 8.58z"
+                fill="#fff"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="inline-block text-indigo-500 no-underline hover:text-indigo-700 hover:text-underline text-center h-12 p-2 md:h-auto md:p-4 avatar"
             data-tippy-content="#facebook_id"
-            href="https://www.facebook.com/sharer/sharer.php?u=#"
+            href="https://www.facebook.com/sounish.nath"
           >
             <svg
               class="fill-current h-4"
@@ -85,15 +108,10 @@
       class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t"
     >
       <!--Lead Card-->
-      <div class="flex  bg-white rounded overflow-hidden shadow-lg">
-        <a
-          class="flex flex-wrap no-underline hover:no-underline"
-        >
+      <div class="flex bg-white rounded overflow-hidden shadow-lg">
+        <a class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full md:w-2/3 rounded-t">
-            <img
-              [src]=repoDetail.image
-              class="h-full w-full shadow"
-            />
+            <img [src]="repoDetail.image" class="h-full w-full shadow" />
           </div>
 
           <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
@@ -104,16 +122,18 @@
                 GETTING STARTED
               </p>
               <div class="w-full font-bold text-xl text-gray-900 px-6">
-                ✨🎉 {{repoDetail.quote}}
+                ✨🎉 {{ repoDetail.quote }}
               </div>
               <p class="mt-3 text-indigo-500 font-sans text-base px-6 mb-5">
-                {{repoDetail.description}}
+                {{ repoDetail.description }}
 
                 <br /><br />
                 <script
                   async=""
                   type="text/javascript"
-                  [src]="//cdn.carbonads.com/carbon.js?serve=CK7D52JJ&amp;placement=wwwtailwindtoolboxcom"
+                  [src]="
+                     //cdn.carbonads.com/carbon.js?serve=CK7D52JJ&amp;placement=wwwtailwindtoolboxcom
+                  "
                   id="_carbonads_js"
                 ></script>
               </p>
@@ -126,7 +146,7 @@
                 <img
                   class="w-8 h-8 rounded-full mr-4 avatar"
                   data-tippy-content="Author Name"
-                  [src]=repoDetail.gravatar
+                  [src]="repoDetail.gravatar"
                   alt="Avatar of Author"
                   tabindex="0"
                 />
@@ -137,10 +157,34 @@
         </a>
       </div>
       <!--/Lead Card-->
-
-
     </div>
 
+    <div class="mt-16">
+      <div
+        class="text-3xl text-black font-bold leading-normal border-b-2 inline-block"
+      >
+        🎉 Project Description
+      </div>
+      <div class="text-xl mt-3 word-break leading-10 tracking-normal">
+        {{ repoDetail.description }}
+      </div>
+
+      <div class="mt-4 p-3">
+        <img [src]=repoDetail.image [alt]=repoDetail.image class="border-black border shadow-xl rounded-lg " >
+      </div>
+
+      <div
+        class="mt-3 p-3 rounded m-auto text-center mx-auto bg-indigo-600 text-xl"
+      >
+        <q class="text-white text-center"> {{ repoDetail.quote }} </q>
+      </div>
+
+      <div
+        class="mt-3 p-3 rounded m-auto text-center mx-auto bg-transparent text-xl"
+      >
+        <iframe src={{repoDetail.youtube_link}} style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+      </div>
+    </div>
 
     <!--Author-->
     <div class="flex w-full items-center font-sans p-8 md:p-24">
