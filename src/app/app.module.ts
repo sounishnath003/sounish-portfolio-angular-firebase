@@ -30,7 +30,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 // for firebase setup
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireDatabase, AngularFireDatabaseModule } from "@angular/fire/database";
-import { environment } from "../environments/environment";
+import { environment } from "../environments/environment.prod";
 import { FirebaseService } from './services/firebase.service';
 
 
