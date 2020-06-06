@@ -1,7 +1,7 @@
 <div>
   <app-herosection
     title="{{ repo_name_url }}"
-    [subtitle]=repoDetail.sortDesc
+    [subtitle]="repoDetail.sortDesc"
   ></app-herosection>
 </div>
 
@@ -107,7 +107,11 @@
       <div class="flex bg-white rounded overflow-hidden shadow-lg">
         <a class="flex flex-wrap no-underline hover:no-underline">
           <div class="w-full md:w-2/3 rounded-t">
-            <img [src]=repoDetail.image[0] [alt]=repoDetail.image[0] class="h-full w-full shadow" />
+            <img
+              [src]="repoDetail.image[0]"
+              [alt]="repoDetail.image[0]"
+              class="h-full w-full shadow"
+            />
           </div>
 
           <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
@@ -167,8 +171,8 @@
 
       <div class="mt-4 p-3 mb-8">
         <img
-          [src]=repoDetail.image[1]
-          [alt]=repoDetail.image[1]
+          [src]="repoDetail.image[1]"
+          [alt]="repoDetail.image[1]"
           class="border-black border shadow-xl rounded-lg"
         />
         <div class="text-center text-black text-base text-sm m-3">
@@ -200,7 +204,7 @@
                   d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
                 ></path>
               </svg>
-              <p class="leading-relaxed text-lg">
+              <p class="leading-relaxed text-2xl">
                 🎉 {{ repoDetail.quote }} ✨💖
               </p>
               <span
@@ -221,24 +225,103 @@
         <div
           class="text-3xl mt-8 mb-4 text-black font-bold leading-normal border-b-2 inline-block"
         >
-          🎉 YouTube Link
+          🎉 YouTube & Details
         </div>
 
         <div class="flex flex-wrap md:flex-row flex-col justify-evenly">
           <div class="m-auto text-center">
             <iframe
               class="m-auto rounded-lg shadow-2xl p-3"
-              width="720"
-              height="480"
+              width="540"
+              height="380"
               [src]="urlSafe"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
+
           <div class="m-auto text-center">
-            <!-- {{repoDetail.tags}} -->
-            hello world
+            <div class="flex flex-col flex-wrap justify-evenly">
+              <div class="m-auto mt-6">
+                <!-- component -->
+                <div class="w-full">
+                  <div
+                    class="coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
+                  >
+                    <div class="top mb-2 flex">
+                      <div class="h-3 w-3 bg-red-500 rounded-full"></div>
+                      <div
+                        class="ml-2 h-3 w-3 bg-orange-300 rounded-full"
+                      ></div>
+                      <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
+                      <div class="m-auto text-green-300">
+                        @git/sounishnath003
+                      </div>
+                    </div>
+                    <div class="mt-4 flex">
+                      <span class="text-black font-black px-2 bg-yellow-400"
+                        >git_clone:~$</span
+                      >
+                      <p class="flex-1 typing items-center pl-2">
+                        {{ repoDetail.project_url }}
+                        <br />
+                      </p>
+                    </div>
+                    <div class="mt-2 flex">
+                      <span class="text-black font-black bg-red-400 px-2"
+                        >license:~$</span
+                      >
+                      <p class="flex-1 typing items-center pl-2">
+                        ✨{{ repoDetail.license }} 🎉.
+                        <br />
+                      </p>
+                    </div>
+                    <div class="mt-2 flex">
+                      <span class="text-green-400">description:~$</span>
+                      <p class="flex-1 typing w-10 items-center pl-2">
+                        🎉{{ repoDetail.sortDesc }}
+                        <br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-auto mt-6">
+                <!-- component -->
+                <div
+                  class="flex flex-col bg-white px-8 py-6 max-w-sm mx-auto rounded-lg shadow-lg"
+                >
+                  <div class="flex justify-center items-center">
+                    <a
+                      class="px-2 py-1 bg-gray-600 text-sm text-green-100 rounded"
+                      href="#"
+                      >Laravel</a
+                    >
+                  </div>
+                  <div class="mt-4">
+                    <a class="text-lg text-gray-700 font-medium" href="#"
+                      >Build Your New Idea with Laravel Freamwork.</a
+                    >
+                  </div>
+                  <div class="flex justify-between items-center mt-4">
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        class="w-8 h-8 object-cover rounded-full"
+                        alt="avatar"
+                      />
+                      <a class="text-gray-700 text-sm mx-3" href="#"
+                        >Alex steve</a
+                      >
+                    </div>
+                    <span class="font-light text-sm text-gray-600"
+                      >Mar 10, 2018</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
