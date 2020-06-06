@@ -37,7 +37,7 @@ export interface Repostitory {
   created_at: string,
   description: string,
   gravatar: string,
-  image: string,
+  image: string[],
   languages: string[],
   license: string,
   name: string,
