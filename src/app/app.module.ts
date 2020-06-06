@@ -32,6 +32,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireDatabase, AngularFireDatabaseModule } from "@angular/fire/database";
 import { environment } from "../environments/environment.prod";
 import { FirebaseService } from './services/firebase.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { FirebaseService } from './services/firebase.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ MatCard, GithubService, FirebaseService],
   bootstrap: [AppComponent],
