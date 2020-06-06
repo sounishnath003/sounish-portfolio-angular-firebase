@@ -161,7 +161,7 @@
 
     <div class="mt-16">
       <div
-        class="text-3xl text-black font-bold leading-normal border-b-2 inline-block"
+        class="text-3xl mt-10 text-black font-bold leading-normal border-b-2 inline-block"
       >
         🎉 Project Description
       </div>
@@ -225,7 +225,7 @@
         <div
           class="text-3xl mt-8 mb-4 text-black font-bold leading-normal border-b-2 inline-block"
         >
-          🎉 YouTube & Details
+          🎉 YouTube Video & Details
         </div>
 
         <div class="flex flex-wrap md:flex-row flex-col justify-evenly">
@@ -260,7 +260,7 @@
                       </div>
                     </div>
                     <div class="mt-4 flex">
-                      <span class="text-black font-black px-2 bg-yellow-400"
+                      <span class="text-black font-black px-2 rounded bg-yellow-400"
                         >git_clone:~$</span
                       >
                       <p class="flex-1 typing items-center pl-2">
@@ -269,7 +269,7 @@
                       </p>
                     </div>
                     <div class="mt-2 flex">
-                      <span class="text-black font-black bg-red-400 px-2"
+                      <span class="text-black font-black rounded bg-red-400 px-2"
                         >license:~$</span
                       >
                       <p class="flex-1 typing items-center pl-2">
@@ -290,33 +290,34 @@
               <div class="m-auto mt-6">
                 <!-- component -->
                 <div
-                  class="flex flex-col bg-white px-8 py-6 max-w-sm mx-auto rounded-lg shadow-lg"
+                  class="flex flex-col border-indigo-600 border-2 bg-white px-8 py-6 max-w-md mx-auto rounded-lg shadow-xl"
                 >
+                <div class="text-xl word-break">Tech Stacks</div>
                   <div class="flex justify-center items-center">
-                    <a
-                      class="px-2 py-1 bg-gray-600 text-sm text-green-100 rounded"
-                      href="#"
-                      >Laravel</a
-                    >
+                    <div *ngFor="let tag of repoDetail.tech_stack">
+                      <a
+                        class="px-2 cursor-pointer hover:bg-indigo-300 py-1 bg-indigo-600 text-sm text-white mr-2 rounded"
+                        >{{ tag }}</a>
+                    </div>
                   </div>
                   <div class="mt-4">
                     <a class="text-lg text-gray-700 font-medium" href="#"
-                      >Build Your New Idea with Laravel Freamwork.</a
+                      >Build Your New Idea with Technologies. ⭐</a
                     >
                   </div>
                   <div class="flex justify-between items-center mt-4">
                     <div class="flex items-center">
                       <img
-                        src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        [src]=repoDetail.gravatar
                         class="w-8 h-8 object-cover rounded-full"
                         alt="avatar"
                       />
                       <a class="text-gray-700 text-sm mx-3" href="#"
-                        >Alex steve</a
+                        >{{ repoDetail.author }}</a
                       >
                     </div>
                     <span class="font-light text-sm text-gray-600"
-                      >Mar 10, 2018</span
+                      >{{ repoDetail.created_at }}</span
                     >
                   </div>
                 </div>
@@ -325,6 +326,14 @@
           </div>
         </div>
       </div>
+
+      <div class="mt-12">
+        <app-course-card></app-course-card>
+        <div *ngFor="let language of repoDetail.tags" >
+
+        </div>
+      </div>
+
     </div>
 
     <!--Author-->

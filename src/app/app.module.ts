@@ -33,6 +33,7 @@ import { AngularFireDatabase, AngularFireDatabaseModule } from "@angular/fire/da
 import { environment } from "../environments/environment.prod";
 import { FirebaseService } from './services/firebase.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { CourseCardComponent } from './projects/projectcard/projectcard-details/course-card/course-card.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     ProjectsComponent,
     ProjectcardComponent,
     ProjectcardDetailsComponent,
+    CourseCardComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
