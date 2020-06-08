@@ -16,8 +16,8 @@
     transform: scale(0.5);
   }
   100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
   }
 }
 @keyframes scale-up-center {
@@ -26,7 +26,7 @@
     transform: scale(0.5);
   }
   100% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
   }
 }

@@ -21,7 +21,7 @@ export class CourseCardComponent implements OnInit {
     });
 
     $('.floating-btn').click(function () {
-      $('.social-panel-container').removeClass('visible').addClass('visible');
+      $('.social-panel-container').toggleClass('visible');
     });
   }
 }
