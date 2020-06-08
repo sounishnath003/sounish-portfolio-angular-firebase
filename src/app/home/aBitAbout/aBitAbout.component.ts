@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as aos from "aos";
 
 @Component({
   selector: 'app-aBitAbout',
@@ -10,6 +11,10 @@ export class ABitAboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    aos.init({
+      duration: 900,
+      delay: 100
+    }) ;
   }
 
 }

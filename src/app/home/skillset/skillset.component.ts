@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as aos from 'aos' ;
 
 @Component({
   selector: 'app-skillset',
@@ -10,6 +11,9 @@ export class SkillsetComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    aos.init({
+
+    }) ;
   }
 
 }

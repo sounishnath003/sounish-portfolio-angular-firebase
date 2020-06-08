@@ -1,5 +1,6 @@
 <div class="p-8 rounded-lg mt-10 max-w-6xl m-auto">
   <div
+  data-aos="fade-in"
     class="flex flex-wrap justify-between text-gray-700 flex-col md:flex-row"
   >
     <div
@@ -14,7 +15,7 @@
       />
     </div>
     <div class="text-center m-auto">
-      <div class="flex flex-wrap cursor-pointer justify-evenly">
+      <div data-aos="fade-left" class="flex flex-wrap cursor-pointer justify-evenly">
         <div class="text-center m-auto uppercase font-bold mr-8">blog</div>
         <div [routerLink]="['/projects']" routerLinkActive="router-link-active"  class="text-center m-auto uppercase font-bold mr-8">projects</div>
         <div

@@ -24,7 +24,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectcardComponent } from './projects/projectcard/projectcard.component';
 import { ProjectcardDetailsComponent } from './projects/projectcard/projectcard-details/projectcard-details.component';
 import { GithubService } from './services/github.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import * as AOS from 'aos' ;
 
 
 // for firebase setup
