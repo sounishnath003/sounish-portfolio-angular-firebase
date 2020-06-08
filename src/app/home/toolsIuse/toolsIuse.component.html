@@ -4,34 +4,14 @@
       <div class="text-2xl font-bold mb-6 text-green-dark-theme text-center">
         Languages
       </div>
-      <app-technology
-        image="../../../assets/c++.png"
-        title="C++"
-        desc="C++ is a multiparadigms, high-level, general-purpose programming language, mostly called C on steroids."
-      ></app-technology>
-
-      <app-technology
-        image="../../../assets/js-logo.jpg"
-        title="JavaScript"
-        desc="My go to programming language pretty much for everything.Be it the front-end, backend, or a CLI tool."
-      ></app-technology>
-
-      <app-technology
-        image="../../assets/ruby.png"
-        title="Ruby"
-        desc="I always prefer ruby in backend building complex understanding due to its simplecity & productivity."
-      ></app-technology>
-
-      <app-technology
-        image="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png"
-        title="HTML"
-        desc="Mostly writing HTML in Vue or ng template, but from time to time I find myself writing a plain, classic HTML file.  practice"
-      ></app-technology>
-      <app-technology
-        image="../../assets/dart-logo.png"
-        title="DART"
-        desc="The language from Google which I choose to build mobile applications."
-      ></app-technology>
+      <div *ngFor="let language of languages">
+        <app-technology
+        data-aod="fade-right"
+          [image]="language.image"
+          [title]="language.title"
+          [desc]="language.desc"
+        ></app-technology>
+      </div>
     </div>
     <div class="m-auto">
       <div class="text-2xl font-bold mb-6 text-green-dark-theme text-center">
@@ -118,6 +98,4 @@
       </h3>
     </div>
   </div> -->
-
-  
 </div>

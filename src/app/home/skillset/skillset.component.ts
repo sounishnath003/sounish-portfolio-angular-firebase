@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as aos from 'aos' ;
 import { FirebaseService } from 'src/app/services/firebase.service';
-import { Skillset } from 'src/app/services/skillset';
+import { Language } from 'src/app/services/Language';
 
 @Component({
   selector: 'app-skillset',
@@ -9,12 +9,12 @@ import { Skillset } from 'src/app/services/skillset';
   styleUrls: ['./skillset.component.css']
 })
 export class SkillsetComponent implements OnInit {
-  skillsets: Skillset[] ;
+  
 
   constructor(private _firebaseService: FirebaseService) { }
 
   ngOnInit() {
-    this._getAllSkillSets() ;
+    // this._getAllSkillSets() ;
     aos.init({
 
     }) ;
@@ -22,9 +22,7 @@ export class SkillsetComponent implements OnInit {
   }
 
   _getAllSkillSets() {
-    this._firebaseService.getSkillSetsFromFirebase().subscribe((res) => {
-      this.skillsets = res as Skillset[] ;
-    })
+   
   }
 
 }
